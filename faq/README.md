@@ -140,5 +140,14 @@ print(min(Smin)) #logn time
 
 ```
 
+## Python Recursive depth limit
+Python have internal recursive depth limit. This limit prevents infinite recursion from causing an overflow of the C stack and crashing Python. If you write a function that runs recursively, this limit may be exceeded. In that case, you need to remove this limit by:
+
+```
+import sys
+sys.setrecursionlimit(your_estimated_upper_bound)
+
+```
+
 
 
